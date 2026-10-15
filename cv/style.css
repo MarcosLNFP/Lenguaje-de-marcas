@@ -1,13 +1,16 @@
 .tarjeta {
     width: 100%;
-    align-content: center;
     border-radius: 10px;
-    overflow: hidden;
-    border: 0;
     background-color: #a3d8c1;
 }
 
+.tarjeta .card-body {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
 .columna-izq{
+    min-width: 0;
     background-color: #68b493;
     border-radius: 10px;
 }
