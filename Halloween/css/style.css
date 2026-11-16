@@ -1,18 +1,16 @@
+/* Carga la tipografía gótica personalizada desde la carpeta fonts. */
 @font-face {
     font-family: "Blackgoth";
     src: url("../fonts/BlackgothRegular.otf") format("opentype");
     font-display: swap;
 }
 
+/* Aplica la tipografía gótica a los elementos que llevan esta clase. */
 .Blackgoth {
     font-family: "Blackgoth", sans-serif;
 }
 
-.rounded-left {
-    border-top-left-radius: var(--bs-border-radius, 0.375rem);
-    border-bottom-left-radius: var(--bs-border-radius, 0.375rem);
-}
-
+/* En pantallas pequeñas, el menú desplegable queda como una lista unida. */
 @media (max-width: 991.98px) {
     #menuPrincipal .navbar-nav {
         margin-top: 1rem;
@@ -35,25 +33,36 @@
     }
 }
 
+/* Redondea únicamente las esquinas derechas de un elemento. Sacado de la documentacion de bootstrap https://getbootstrap.com/docs/6.0/utilities/border-radius/ */
 .rounded-right {
     border-top-right-radius: var(--bs-border-radius, 0.375rem);
     border-bottom-right-radius: var(--bs-border-radius, 0.375rem);
 }
 
+/* Redondea únicamente las esquinas izquierdas de un elemento. Sacado de la documentacion de bootstrap https://https://getbootstrap.com/docs/6.0/utilities/border-radius/ */
+.rounded-left {
+    border-top-left-radius: var(--bs-border-radius, 0.375rem);
+    border-bottom-left-radius: var(--bs-border-radius, 0.375rem);
+}
+
+/* Mantiene oscuro el texto de los enlaces de navegación. */
 .navbar .nav-link,
 .navbar .nav-link:focus,
 .navbar .nav-link.active {
     color: #272727;
 }
 
+/* Cambia el color del hover por defecto de bootstrap */
 .navbar .nav-link:hover {
     background-color: #d3d3d3 !important;
 }
 
+/* Sobrescribe el color oscuro de Bootstrap para usar negro. */
 .bg-dark{
     background-color: black !important;
 }
 
+/* Imagen de fondo en la pagina, la posicion es estática aunque se haga scroll */
 .background {
     position: fixed;
     inset: 0;
@@ -61,22 +70,44 @@
     width: 100%;
     height: 100vh;
     background: url("../img/background.png") center / cover no-repeat;
-    pointer-events: none;
-}
-* {
-    box-sizing: border-box;
 }
 
-html,
-body {
-    min-height: 100%;
-    max-width: 100%;
-    overflow-x: clip;
+/* En escritorio, la imagen de Historia llena su tarjeta sin deformarse. */
+@media (min-width: 992px) {
+    .historia-img {
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
-body {
-    margin: 0;
-    background: #080808;
-    isolation: isolate;
+
+/* Estilo translúcido de las tarjetas de contenido. */
+.tarjeta {
+    background-color: rgba(27, 27, 29, 0.514);
+    color: #ffffff;
+    backdrop-filter: blur(3px);
 }
 
+/* Fondo translúcido compartido por los contenedores principales. */
+.contenedoresprincipales {
+    background-color: rgba(255, 255, 255, 0.027);
+    color: #ffffff;
+    backdrop-filter: blur(3px);
+}
+
+/* Tamaño y color común de los títulos grandes de sección. */
+.titulo{
+    font-size: 100px;
+    color: #ffffff;
+}
+
+/* Empuja el footer al final cuando la página tiene poco contenido. */
+.site-footer {
+    margin-top: auto;
+}
+
+/* Ajuste de imagen de footer */
+.logofooter{
+    width: 10rem;
+    height: 6rem;
+}

@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- CSS propios -->
     <link rel="stylesheet" href="css/style.css">
     <title>La Llorona</title>
 </head>
 <body>
-    <div class="background" aria-hidden="true"></div>
+    <!-- Fondo decorativo; se oculta a lectores de pantalla porque no aporta contenido. -->
+    <div class="background"></div>
+    <!-- JavaScript de Bootstrap: activa el menú para móviles y el carrusel de imagenes. -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <!-- Menú de navegación -->
+    <!-- Barra de navegación; el botón aparece en pantallas pequeñas. -->
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
         <div class="container">
             <img src="img/logo.png" alt="" width="200" height="110">
@@ -26,17 +30,219 @@
             <div class="collapse navbar-collapse" id="menuPrincipal">
                 <ul class="navbar-nav ms-auto text-center">
                     <li class="nav-item">
-                        <a class="nav-link active Blackgoth fs-3 bg-white rounded-left" href="index.html">Inicio</a>
+                        <a class="nav-link active Blackgoth fs-3 bg-white rounded-left" href="#inicio">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link Blackgoth fs-3 bg-white" href="#">Historia</a>
+                        <a class="nav-link Blackgoth fs-3 bg-white" href="#historia">Historia</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link Blackgoth fs-3 bg-white rounded-right" href="#">Galeria</a>
+                        <a class="nav-link Blackgoth fs-3 bg-white" href="#galeria">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link Blackgoth fs-3 bg-white rounded-right" href="#contacto">Contáctanos</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <!-- Presentación de La Llorona en dos columnas responsivas. -->
+    <main id="inicio" class="container my-4">
+        <div class="contenedoresprincipales p-4 rounded">
+        <div class="row g-4">
+            <!-- Primera columna: imagen y resumen de la leyenda. -->
+            <div class="col-12 col-md-6">
+                <div class="p-3 tarjeta rounded h-100">
+                    <div class="card-mb-3">
+                        <img src="img/llorona.png" class="card-img-top rounded" alt="La llorona">
+                        <div class="card-body">
+                            <h5 class="card-title fs-1 Blackgoth text-center">La Llorona</h5>
+                            <p class="card-text fs-5">La leyenda de La Llorona cuenta la historia de una mujer que, según algunas versiones, perdió la razón y ahogó a sus propios hijos en un río.</p>
+                            <p class="card-text fs-5">Comprendió lo que había hecho, se llenó de arrepentimiento y desesperación. Incapaz de soportar su culpa, terminó muriendo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Segunda columna: datos y una descripción complementaria. -->
+            <div class="col-12 col-md-6">
+                <div class="p-3 tarjeta rounded">
+                    <h2 class="Blackgoth fs-1">Datos sobre La Llorona</h2>
+                    <ul class="fs-5">
+                        <li>Origen: México, Centroamérica y países sudamericanos</li>
+                        <br>
+                        <li>Aparición: Ríos, lagos y caminos solitarios.</li>
+                        <br>
+                        <li>Aspecto: Mujer vestida de blanco y cabello largo.</li>
+                        <br>
+                        <li>Momento: Principalmente durante la noche.</li>
+                        <br>
+                        <li>Señal: Un llanto que anuncia desgracias.</li>
+                    </ul>
+                    <p class="fs-5">Existen muchas versiones de esta leyenda, pero todas comparten la imagen de una mujer que vaga desconsolada durante la noche. En algunos relatos, su llanto sirve de advertencia para quienes caminan cerca del agua; en otros, aparece para recordar la pérdida de sus hijos y el peso de su arrepentimiento.</p>
+                    <img src="img/llorona2.jpg" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <!-- Separador "Historia" -->
+    <div id="historia" class="contenedoresprincipales">
+    <h1 class="Blackgoth titulo text-center border-top border-bottom">Historia</h1>
+    </div>
+    <!-- Contenedor con dos columnas -->
+    <div class="container my-4">
+        <div class="contenedoresprincipales p-4 rounded">
+            <!-- En escritorio, imagen y relato se muestran lado a lado; en móvil se apilan. -->
+            <div class="row g-4">
+                <div class="col-12 col-lg-6">
+                    <div class="tarjeta rounded h-100 overflow-hidden">
+                        <img src="img/historia.png" alt="La Llorona junto a un río" class="img-fluid rounded w-100 historia-img">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="tarjeta rounded h-100 p-4 align-items-center">
+                        <p class="fs-5 mb-0">La leyenda de La Llorona
+                        Hace muchos años, en un pequeño pueblo de México, vivía una hermosa mujer conocida por su belleza y su largo cabello oscuro. Se decía que era una mujer amable, pero también muy apasionada. Con el paso del tiempo, se enamoró de un hombre con quien tuvo varios hijos y con el que soñaba construir una familia feliz.</p>
+                        <br>
+                        <p class="fs-5 mb-0">Durante un tiempo, vivieron tranquilos y felices. Sin embargo, aquel hombre comenzó a distanciarse de ella. Cada vez pasaba menos tiempo en casa y sus visitas se hicieron más escasas. Finalmente, la abandonó para casarse con otra mujer de una posición social más elevada.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Tabla con las características principales de la leyenda. -->
+    <div class="container my-4">
+        <div class="contenedoresprincipales p-4 rounded">
+            <h2 class="Blackgoth fs-1 text-center mb-4">Características de La Llorona</h2>
+            <div class="table-responsive">
+                <table class="table table-dark table-striped table-bordered align-middle mb-0">
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Origen</th>
+                            <td>Leyenda popular extendida por México y otros países de Latinoamérica.</td>
+                        </tr>
+                        <tr>
+                            <th>Apariencia</th>
+                            <td>Se la representa como una mujer vestida de blanco, con el cabello largo.</td>
+                        </tr>
+                        <tr>
+                            <th>Lugares</th>
+                            <td>Ríos, lagos, caminos solitarios y lugares cercanos al agua.</td>
+                        </tr>
+                        <tr>
+                            <th>Momento</th>
+                            <td>Suele aparecer durante la noche.</td>
+                        </tr>
+                        <tr>
+                            <th>Señal</th>
+                            <td>Su llanto, que según el relato anuncia su presencia.</td>
+                        </tr>
+                        <tr>
+                            <th>Tema</th>
+                            <td>La pérdida, el arrepentimiento y el recuerdo de sus hijos.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Separador "Galeria" -->
+    <div id="galeria" class="contenedoresprincipales">
+    <h1 class="Blackgoth titulo text-center border-top border-bottom">Galeria</h1>
+    </div>
+    <!-- Carrusel de imágenes de la galería. He usado el ejemplo de carrusel con controles de bootstrap -->
+    <div class="container my-4">
+        <div class="contenedoresprincipales p-4 rounded">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner rounded">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="img/galeria1.png" alt="Imagen 1 de La Llorona">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="img/galeria2.png" alt="Imagen 2 de La Llorona">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="img/galeria3.png" alt="Imagen 3 de La Llorona">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="img/galeria4.jpg" alt="Imagen 4 de La Llorona">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="img/galeria5.jpg" alt="Imagen 5 de La Llorona">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="img/galeria6.jpg" alt="Imagen 6 de La Llorona">
+                            </div>
+                        </div>
+                        <!-- Controles para avanzar o retroceder por las imágenes. -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Separador "Contactanos"-->
+    <div id="contacto" class="contenedoresprincipales">
+    <h1 class="Blackgoth titulo text-center border-top border-bottom">Contactanos</h1>
+    </div>
+    <!-- Contenedores Formulario y Ubicación -->
+    <!-- Formulario -->
+    <div class="container my-4">
+        <div class="row g-4 text-white">
+            <div class="col-12 col-lg-6" aria-labelledby="contacto-titulo">
+                <div class="contenedoresprincipales rounded h-100 p-4">
+                    <h2 id="contacto-titulo" class="Blackgoth h1 mb-4">Déjanos un mensaje</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="correo" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="correo" name="correo" placeholder="nombre@ejemplo.com" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+            <!-- Contenedor Ubicacion -->
+            <div class="col-12 col-lg-6">
+                <div class="contenedoresprincipales rounded text-white h-100 p-4">
+                    <h2 class="Blackgoth">Ubicación</h2>
+                    <p>Umbral Xochimilco, Estado de México, México</p>
+                    <!-- Mapa incrustado de google maps-->
+                    <div class="rounded-3 overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15124.717153473011!2d-99.11063099214105!3d19.28374711452244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce016db9fbb5a7%3A0x4cfc118613cc9c53!2sUmbral%20Xochimilco!5e1!3m2!1ses!2ses!4v1793894172062!5m2!1ses!2ses" width="600" height="450" class="rounded border" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer de la pagina -->
+    <footer class="site-footer bg-dark text-center py-3 text-white">
+        <div class="container">
+            <img src="img/logo.png" alt="" class="logofooter">
+            <p class="mb-2">Una leyenda que vive en los Canales Xochimilco</p>
+            <small>&copy; 2026 La Llorona. Todos los derechos reservados.</small>
+        </div>
+    </footer>
+    
 </body>
 </html>
